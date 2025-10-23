@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "cypress": "^15.3.0",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.3.0"
+  },
+  "scripts": {
+    "cypress:open:dev": "cypress open --config-file config-dev.js",
+    "cypress:open:prod": "cypress open --config-file config-prod.js",
+    "test:run": "cypress run",
+    "report:merge": "mochawesome-merge cypress/reports/.jsons/*.json > cypress/reports/report.json",
+    "report:generate": "marge cypress/reports/report.json --reportDir cypress/reports/html",
+    "report:full": "npm run test:run && npm run report:merge && npm run report:generate"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  }
+}
