@@ -14,7 +14,9 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v4
 
-        
+      - name: Subir API Serverest em background 
+        run:  npx serverest@latest &
+
       - name: Rodar testes Cypress (modo headless)
         uses: cypress-io/github-action@v6
 
