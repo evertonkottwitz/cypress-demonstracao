@@ -20,10 +20,10 @@ jobs:
           node-version: 18
 
       - name: Instalar dependências
-        run: npm install
+        run: npm ci
 
       - name: Rodar testes Cypress (modo headless)
-        run: npx cypress run
+        uses: cypress-io/github-action@v6
 
       - name: Gerar relatório Mochawesome
         run: |
