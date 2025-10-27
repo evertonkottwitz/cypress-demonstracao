@@ -20,11 +20,6 @@ jobs:
       - name: Rodar testes Cypress (modo headless)
         uses: cypress-io/github-action@v6
 
-      - name: Gerar relatório Mochawesome
-        run: |
-          npx mochawesome-merge cypress/reports/*.json > cypress/reports/report.json
-          npx marge cypress/reports/report.json --reportDir cypress/reports/html
-
       - name: Fazer upload do relatório HTML como artefato
         uses: actions/upload-artifact@v4
         with:
