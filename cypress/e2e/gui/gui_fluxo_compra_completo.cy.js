@@ -2,7 +2,7 @@ import login from "../../pages/login"
 import produtos from "../../pages/produtos"
 import checkout from "../../pages/checkout"
 
-describe('GUI - Fluxo completo de uma compra', () => {
+describe('GUI - Fluxo completo de uma compra - exemplo com Page Objects', () => {
   beforeEach(() =>{
     login.logarComSucesso('standard_user', 'secret_sauce')
   }

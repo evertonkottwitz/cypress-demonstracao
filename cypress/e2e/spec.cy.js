@@ -1,4 +1,4 @@
-describe('teste de login', () => {
+describe.skip('teste de login', () => { //exemplo para pular testes .skip
   it('Login com sucesso', () => {
     cy.visit('https://front.serverest.dev/login')
     cy.get('[data-testid="email"]').type('jotasilva123@gmail.com')
@@ -8,7 +8,7 @@ describe('teste de login', () => {
     cy.get('h1').contains('Lista de Compras')
   })
 
-    it.only('Login com falha', () => {
+    it.only('Login com falha', () => { // exemplo para rodar apenas este trecho exclusivo .only
     cy.visit('https://front.serverest.dev/login')
     cy.get('[data-testid="email"]').type('jotasilva123@gmail.com')
     cy.get('[data-testid="senha"]').type('senhaerrada')
@@ -17,6 +17,3 @@ describe('teste de login', () => {
   })
 })
 
-//jota silva
-//jotasilva123@gmail.com
-//jotajota1010
